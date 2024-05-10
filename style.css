@@ -1,0 +1,46 @@
+.menu-container {
+	width: 80%;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #f7f7f7;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-category {
+	margin-bottom: 20px;
+}
+
+.menu-item {
+	margin-bottom: 10px;
+}
+
+.menu-item img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+.menu-item h4 {
+	margin-top: 0;
+}
+
+.menu-item p {
+	font-size: 14px;
+	color: #666;
+}
+
+.menu-item .price {
+	font-weight: bold;
+	color: #333;
+}
+
+.bg-red {
+	background-color: #FFC080; /* Jollibee red color */
+}
+
+.logo {
+	width: 50px;
+	height: 50px;
+}

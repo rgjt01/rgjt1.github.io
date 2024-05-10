@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jollibee</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .company-name,
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .company-description,
+        .company-history,
+        .company-recent,
+        .section-description {
+            font-size: 1.2rem;
+        }
+
+        .meet-the-team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .promo-item {
+            width: 300px;
+            margin: 20px;
+            text-align: center;
+        }
+
+.popup {
+    display: none; /* Hide the pop-up by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it's above other elements */
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.promo-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    transition: box-shadow 0.3s ease; /* Add transition effect */
+}
+
+.promo-card:hover {
+    background-color: #FFD700; /* Change background color to yellow on hover */
+}
+        .promo-section .container {
+            width: 100%;
+            max-width: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .team-description {
+            text-align: center;
+        }
+
+        .team-members {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .company-details {
+            width: calc(100% - 40px);
+            text-align: justify;
+            margin: 0 auto;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        .card-icon img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card-title {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #D6001C;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .card-banner {
+            border-radius: 8px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+        <a class="navbar-brand" href="#"><img src="Jollibee-logo.png" alt="Jollibee Logo"></a>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="branches.html">Branches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="order.html">Order Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="franchise.html">Franchise</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html">Meet the Team</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section id="team" class="promo-section">
+    <div class="container">
+        <div class="company-details">
+            <h2 class="section-title">Meet the Team</h2>
+            <p class="section-description">Welcome to the Meet the Team page. Get to know the owners and founders of Jollibee.</p>
+
+            <div class="company-details">
+                <h2 class="company-name">Jollibee Foods Corporation</h2>
+                <p class="company-description">Jollibee Foods Corporation, commonly known as Jollibee, is a multinational company headquartered in Pasig, Metro Manila, Philippines. JFC owns the fast food brand Jollibee and has acquired several competitors in the fast food business in the Philippines and abroad, including Chowking, Greenwich, Red Ribbon, and Mang Inasal, due to the success of its flagship brand. As of September 2022, JFC operates over 6,300 stores worldwide, with retail sales totaling ₱210.9 billion.</p>
+                <p class="company-history">Founded in 1975 by Dr. Tony Tan Caktiong, Jollibee started as a small family business selling ice cream in the streets of Manila. Three years later, they converted the ice cream parlors into the Jollibee brand we know today. The family saw the opportunity for hot meals and put faith in hard work, passion, and focus to turn their small business into one of the biggest companies in the Philippines, Asia, and the world. Today, the Jollibee Group has 18 well-loved brands and over 6,900 stores in 33 countries, aiming to become one of the top five restaurant companies in the world.</p>
+                <p class="company-recent">Recently, the Jollibee Group acquired a 10% ownership in Botrista, a beverage technology leader, and owns a 90% participating interest in Titan Dining Partners II Ltd to further grow Asia Pacific food service brands and/or bring strong global food service brands to Asia Pacific.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pop-up Modal -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div class="card-icon">
+            <img id="popup-image" src="" alt="Team Member Image" class="w-100 card-banner">
+        </div>
+    </div>
+</div>
+
+<!-- Meet the Team -->
+<div class="promo-list meet-the-team">
+    <ul class="promo-list">
+        <li class="promo-item">
+            <div class="promo-card" onclick="openPopup('tony.png')">
+                <div class="card-icon">
+                    <img src="tony.png" alt="Dr. Tony Tan Caktiong" class="w-100 card-banner">
+                </div>
+                <h3 class="card-title">Dr. Tony Tan Caktiong</h3>
+                <p class="card-text">Founder and Chairman</p>
+            </div>
+        </li>
+        <li class="promo-item">
+            <div class="promo-card" onclick="openPopup('grace.png')">
+                <div class="card-icon">
+                    <img src="grace.png" alt="Grace Tan Caktiong" class="w-100 card-banner">
+                </div>
+                <h3 class="card-title">Grace Tan Caktiong</h3>
+                <p class="card-text">Founder and Vice Chairman</p>
+            </div>
+        </li>
+        <li class="promo-item">
+            <div class="promo-card" onclick="openPopup('ern.png')">
+                <div class="card-icon">
+                    <img src="ern.png" alt="Ernesto Tanmantiong" class="w-100 card-banner">
+                </div>
+                <h3 class="card-title">Ernesto Tanmantiong</h3>
+                <p class="card-text">President and CEO</p>
+            </div>
+        </li>
+        <li class="promo-item">
+            <div class="promo-card" onclick="openPopup('joseph.png')">
+                <div class="card-icon">
+                    <img src="joseph.png" alt="Joseph Tanbuntiong" class="w-100 card-banner">
+                </div>
+                <h3 class="card-title">Joseph Tanbuntiong</h3>
+                <p class="card-text">CFO</p>
+            </div>
+        </li>
+        <li class="promo-item">
+            <div class="promo-card" onclick="openPopup('will.png')">
+                <div class="card-icon">
+                    <img src="will.png" alt="William Tan Untiong" class="w-100 card-banner">
+                </div>
+                <h3 class="card-title">William Tan Untiong</h3>
+                <p class="card-text">COO</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="team-description">
+    <p>These are just a few of the many talented individuals who help drive the success of Jollibee Foods Corporation.</p>
+</div>
+
+<footer>
+    <div class="footer-top" style="background-color: #FFB80E; height: 5px;"></div>
+    <p style="background-color: #D6001C; color: #FFF; padding: 10px 0; text-align: center;">Developed by <span
+                style="color: #FFB80E;">Bles G. Tito</span></p>
+</footer>
+<script>
+    function openPopup(imagePath) {
+        const popup = document.getElementById('popup');
+        const popupImage = document.getElementById('popup-image');
+        popupImage.src = imagePath;
+        popup.style.display = 'block';
+    }
+
+    function closePopup() {
+        const popup = document.getElementById('popup');
+        popup.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

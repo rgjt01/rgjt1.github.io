@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Jollibee</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+    /* Gallery styling */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            cursor: pointer;
+            width: 100%; /* Set width to 100% */
+            height: 200px; /* Set height to desired size */
+            overflow: hidden; /* Ensure images don't overflow their container */
+        }
+
+        .gallery-item img {
+            width: 100%; /* Ensure images fill the container */
+            height: 100%; /* Ensure images fill the container */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 5px;
+        }
+	/* Lightbox styling */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+
+        .lightbox-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .lightbox img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 5px;
+        }
+	</style>
+</head>
+<body>
+  <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+        <a class="navbar-brand" href="#"><img src="Jollibee-logo.png" alt="Jollibee Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item active">
+    <div class="dropdown">
+        <button class="nav-link dropdown-toggle" type="button" id="menuDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+        </button>
+        <div class="dropdown-menu" aria-labelledby="menuDropdown">
+            <a class="dropdown-item" href="menu.html">View Menu</a>
+            <a class="dropdown-item" href="order.html">Delivery</a>
+        </div>
+    </div>
+</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="branches.html">Branches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="order.html">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="franchise.html">Franchise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Meet the Team</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Your Gallery content goes here -->
+    <h1>Our Gallery</h1>
+    <p>This is the Gallery page. Let's take a trip down memory lane.</p>
+    <main>
+        <section>
+            <h2>Company Gallery</h2>
+            <div class="gallery-container">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" onclick="openLightbox('gal1')">
+                    <img id="gal1" src="gal1.jpg" alt="Image 1">
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" onclick="openLightbox('gal2')">
+                    <img id="gal2" src="gal2.jpg" alt="Image 2">
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" onclick="openLightbox('gal3')">
+                    <img id="gal3" src="gal3.jpg" alt="Image 3">
+                </div>
+                <!-- and so on -->
+				<div class="gallery-item" onclick="openLightbox('gal4')">
+                    <img id="gal4" src="gal4.jpg" alt="Image 4">
+                </div>
+				<div class="gallery-item" onclick="openLightbox('gal5')">
+                    <img id="gal5" src="gal5.jpg" alt="Image 5">
+                </div>
+				<div class="gallery-item" onclick="openLightbox('gal6')">
+                    <img id="gal6" src="gal6.jpg" alt="Image 6">
+                </div>
+				<div class="gallery-item" onclick="openLightbox('gal7')">
+                    <img id="gal7" src="gal7.jpg" alt="Image 7">
+                </div>
+				<div class="gallery-item" onclick="openLightbox('gal8')">
+                    <img id="gal8" src="gal8.jpg" alt="Image 8">
+                </div>
+				<div class="gallery-item" onclick="openLightbox('gal9')">
+                    <img id="gal9" src="gal9.jpg" alt="Image 9">
+                </div>
+				
+            </div>
+            <!-- Lightbox -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <div class="lightbox-content">
+                    <span class="close-btn">&times;</span>
+                    <img id="lightbox-image" src="" alt="Lightbox Image">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Add footer with developer's name -->
+<footer>
+        <div class="footer-top" style="background-color: #FFB80E; height: 5px;"></div>
+        <p style="background-color: #D6001C; color: #FFF; padding: 10px 0; text-align: center;">Developed by <span style="color: #FFB80E;">Ballada</span></p>
+    </footer>
+	<script>
+        // Function to open the lightbox with the clicked image
+        function openLightbox(imageId) {
+            var image = document.getElementById(imageId);
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = image.src;
+            lightbox.style.display = 'block';
+        }
+
+        // Function to close the lightbox
+        function closeLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

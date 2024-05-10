@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - Jollibee</title>
+    <link rel="stylesheet" href="styles.css">
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <!-- Include header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+        <a class="navbar-brand" href="#"><img src="Jollibee-logo.png" alt="Jollibee Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+<li class="nav-item active">
+    <div class="dropdown">
+        <button class="nav-link dropdown-toggle" type="button" id="menuDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+        </button>
+        <div class="dropdown-menu" aria-labelledby="menuDropdown">
+            <a class="dropdown-item" href="menu.html">View Menu</a>
+            <a class="dropdown-item" href="order.html">Delivery</a>
+        </div>
+    </div>
+</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="branches.html">Branches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="order.html">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="franchise.html">Franchise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Meet the Team</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="order">
+        <div class="container">
+
+    <!-- Your Order Now content goes here -->
+    <h1>Order Now</h1>
+    <p>This is the Order Now page. Choose your delivery options and place your order.</p>
+    <hr size= 3 noshade>
+
+    <!-- Order form -->
+    <div class="order-form">
+        <h2>Order Form</h2>
+        <form action="#" method="POST">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required><br><br>
+            
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required><br><br>
+            
+            <label for="contact-no">Contact No.:</label>
+            <input type="tel" id="contact-no" name="contact-no" pattern="[0-9]{10}" required><br><br>
+		<div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery">Delivery Options:</label>
+                    <select id="delivery" name="delivery" required>
+                        <option value="standard">Standard Delivery</option>
+                        <option value="express">Express Delivery (+$5)</option>
+                    </select>
+                </div>
+
+            <label for="payment-mode">Mode of Payment:</label>
+            <select id="payment-mode" name="payment-mode" required>
+                <option value="cash">Cash</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="online-payment">Online Payment</option>
+            </select><br><br>
+
+            <input type="submit" value="Place Order">
+        </form>
+    </div>
+    <hr size= 3 noshade>
+
+ <div class="contact-form">
+        <h2>Contact Form</h2>
+        <form action="#" method="POST">
+            <label for="contact-first-name">First Name:</label>
+            <input type="text" id="contact-first-name" name="contact-first-name" required><br><br>
+            
+            <label for="contact-last-name">Last Name:</label>
+            <input type="text" id="contact-last-name" name="contact-last-name" required><br><br>
+            
+            <label for="concern-type">Concern Type:</label>
+            <select id="concern-type" name="concern-type" required>
+                <option value="general">General Inquiry</option>
+                <option value="complaint">Complaint</option>
+                <option value="feedback">Feedback</option>
+            </select><br><br>
+
+            <label for="concern-details">Concern Details:</label><br>
+            <textarea id="concern-details" name="concern-details" rows="4" cols="50" required></textarea><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <hr size= 3 noshade>
+
+    <!-- Add footer with developer's name -->
+    <footer>
+<div class="footer-top" style="background-color: #FFB80E; height: 5px;"></div>
+        <p style="background-color: #D6001C; color: #FFF; padding: 10px 0; text-align: center;">Developed by <span style="color: #FFB80E;">Angela Torres</span></p>   
+ </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
